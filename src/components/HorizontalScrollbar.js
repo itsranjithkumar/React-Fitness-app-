@@ -42,8 +42,8 @@ const HorizontalScrollbar = ({ data,bodyPart,setBodyPart }) => {
           m="0px 40px"
         >
 
-          <BodyPart item={item} BodyPart=
-          {BodyPart}setBodyPart={setBodyPart}/>
+          <BodyPart item={item} bodyPart=
+          {bodyPart}setBodyPart={setBodyPart}/>
         </Box>
       ))}
     </ScrollMenu>
