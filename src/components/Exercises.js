@@ -14,7 +14,7 @@ const Exercises = ({ exercises, setExercises, bodyPart}) => {
       p="20px"
     
     >
-      <Typography variant='h3'>
+      <Typography variant='h3' mb="46px">
         Showing Results
       </Typography>
       <Stack direction="row" sx={{gap: {lg:"110px", xs: '50px'}}}
