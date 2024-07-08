@@ -14,21 +14,21 @@ const Navbar = () => (
       justifyContent: "none",
     }}
     px="20px"
-  >
+      >
     <Link to="/">
       <img
         src={Logo}
         alt="logo"
         style={{ width: "48px", height: "48px", margin: "0px 20px" }}
       />
-    </Link>
+        </Link>
     <Stack
       direction="row"
       gap="40px"
       fontFamily="Alegreya"
       fontSize="24px"
       alignItems="flex-end"
-    >
+            >
       <Link
         to="/"
         style={{
@@ -42,8 +42,8 @@ const Navbar = () => (
       <a href="#exercises" style={{ textDecoration: "none", color: "#3A1212" }}>
         Exercises
       </a>
-    </Stack>
-  </Stack>
+        </Stack>
+        </Stack>
 );
 
-export default Navbar;
+export default Navbar

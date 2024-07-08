@@ -3,7 +3,7 @@ import {useParams} from 'react-router-dom';
 import {Box} from '@mui/material'
 
 
-import { exerciseOptions, fetchData, youtubeOptions } from '../utils/fetchData';
+import { exerciseOptions, fetchData, youtubeoptions } from '../utils/fetchData';
 
 import Detail from '../components/Detail';
 import ExerciseVideos from '../components/ExerciseVideos';
@@ -21,14 +21,13 @@ const ExerciseDetail = () => {
 
       const youtubeSearchUrl ='https://youtube-search-and-download.p.rapidapi.com'
 
-      const exerciseDetailData = await fetchData (`$(exerciseDbUrl)/exercises/exercise/$(id)`,exerciseOptions);
+      const exerciseDetailData=await fetchData(`${exerciseDbUrl}/exercises/exercise/${id}`,exerciseOptions);
       setExerciseDetail(exerciseDetailData);
 
-      const ExerciseVideosData = await fetchData(`$(youtubeSearchUrl}/search?q=$
-      {exerciseDetailData.name}`, youtubeOptions);
-      
-
-     }
+      const exerciseVideosData=await fetchData(
+        `${youtubeSearchUrl}/search?query=${exerciseDetailData.name}`,youtubeOptions
+      );
+    }
 
      fetchExercisesData();
 
@@ -36,9 +35,9 @@ const ExerciseDetail = () => {
 
   return (
     <Box>
-      <Detail  ExerciseDetail={exerciseDetail}/>
+      <Detail exerciseDetail={exerciseDetail}/>
       <ExerciseVideos exerciseVideos={exerciseVideos} name={exerciseDetail.name}/>
-      <similarExercise />
+      <SimilarExercises/>
     </Box>
   )
 }
