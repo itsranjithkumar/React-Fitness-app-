@@ -26,7 +26,7 @@ const HeroBanner = () => (
       <Typography fontWeight={600} color="#FF2625" sx={{ opacity: '0.1', display: { lg: 'block', xs: 'none' }, fontSize: '200px' }}>
         Exercise
       </Typography>
-      <img src={HeroBannerImage} alt="Hero-banner" className="Hero-banner-img" />
+      <img src={HeroBannerImage} alt="Hero-banner" className="hero-banner-img" />
     </Box>
   );
 export default HeroBanner
