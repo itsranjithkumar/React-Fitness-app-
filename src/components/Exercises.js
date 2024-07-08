@@ -16,14 +16,14 @@ const Exercises = ({exercises,setExercises,bodyPart}) => {
   const indexOfFirstExercise=indexOfLastExercise-exercisesPerPage;
   const currentExercises=exercises.slice(indexOfFirstExercise,indexOfLastExercise)
 
-const paginate=(e,value)=>{
+const Paginate=(e,value)=>{
 setCurrentPage(value);
 
 window.scrollTo({ top: 1800, behavior:'smooth'})
 }
 
 useEffect(()=> {
-  const fetchExerciseData = async () => {
+  const fetchExercisesData = async () => {
     let exerciseData =[]
 
     if (bodyPart === 'all') {
@@ -65,6 +65,6 @@ const Exercises = ({ exercises, setExercises, bodyPart}) => {
     </Box>
   )
 }
-
+}
 export default Exercises
 
